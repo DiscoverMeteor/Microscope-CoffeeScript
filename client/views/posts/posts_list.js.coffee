@@ -9,8 +9,15 @@ Template.bestPosts.helpers
     handle: topPostsHandle
 
 Template.postsList.helpers
-  posts: ->
-    Posts.find {}, {sort: this.sort, limit: this.handle.limit()}
+  postsWithRank: ->
+    i = 0
+    options =
+      sort: this.sort
+      limit: this.handle.limit()
+    Posts.find({}, options).map (post) ->
+      post._rank = i
+      i += 1
+      post
 
   postsReady: ->
     !this.handle.loading()
