@@ -61,3 +61,13 @@ if Posts.find().count() == 0
     url: 'http://makinggamesishard.piinecone.com'
     submitted: now - 3600 * 1000
     commentsCount: 0
+
+  createPost = (i) ->
+    Posts.insert
+      title: "Test post #{i}"
+      userId: nicholas._id
+      author: nicholas.profile.name
+      url: "http://google.com?q=test-#{i}"
+      submitted: now - i * 3600 * 1000
+      commentsCount: 0
+  createPost(i) for i in [0..10]

@@ -1,6 +1,8 @@
 {
   "packages": {
     "router": {},
-    "accounts-ui-bootstrap-dropdown": {}
+    "accounts-ui-bootstrap-dropdown": {},
+    "paginated-subscription": {},
+    "spin": {}
   }
 }
