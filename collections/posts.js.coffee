@@ -25,7 +25,7 @@ Meteor.methods
     post = _.extend _.pick(postAttributes, 'url', 'message'),
                     title: "#{postAttributes.title} #{if this.isSimulation then ' (client)' else ' (server)'}"
                     userId: user._id
-                    author: user.email
+                    author: user.username
                     submitted: new Date().getTime()
                     commentsCount: 0
                     upvoters: []
