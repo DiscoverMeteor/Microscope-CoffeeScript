@@ -1,2 +1,3 @@
 Meteor.subscribe 'posts'
-Meteor.subscribe 'comments'
+Meteor.autorun ->
+  Meteor.subscribe 'comments', Session.get 'currentPostId'

@@ -27,13 +27,6 @@ Meteor.methods
                     userId: user._id
                     author: user.email
                     submitted: new Date().getTime()
-
-    if !this.isSimulation
-      Future = Npm.require 'fibers/future'
-      future = new Future()
-      Meteor.setTimeout ->
-        future.return()
-      , 5 * 1000
-      future.wait()
+                    commentsCount: 0
 
     Posts.insert post
