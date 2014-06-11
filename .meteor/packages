@@ -4,12 +4,10 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-preserve-inputs
 bootstrap
 coffeescript
 router
-accounts-ui-bootstrap-dropdown
 accounts-password
-errors
 paginated-subscription
 spin
+accounts-ui-bootstrap-dropdown
